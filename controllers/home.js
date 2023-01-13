@@ -4,7 +4,7 @@ module.exports = {
     getIndex: async (req, res) => {
         try {
             const users = await User.find();
-            res.render('index.ejs', { user, users });
+            res.render('index.ejs', { user: users });
         } catch (err) {
             if (err) return res.status(500).send(err);
         }
