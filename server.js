@@ -13,12 +13,9 @@ connectDB();
 
 // Middleware
 app.set('view engine', 'pug'); // pug
-app.set('views', 'views');  // pug
+app.set('views', 'views');  // pug, not sure if I will need this yet
 app.set(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
-// app.get('/', (req, res, next) => {
-//     res.status(200).render('home')
-// }) // pug
 
 
 // Routes
