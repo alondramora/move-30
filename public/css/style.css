@@ -1,3 +1,47 @@
 h1 {
     color: red;
 }
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Tahoma, Serif;
+}
+
+body {
+  color: #263238;
+}
+
+/* nav bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    padding-left: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+/* nav bar media queries */
+@media only screen and (max-width: 600px){
+    nav {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    nav ul {
+        flex-direction: column;
+        padding-top: 0.5rem;
+    }
+    nav li {
+        padding: 0.5rem 0;
+    }
+}
