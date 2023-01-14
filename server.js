@@ -12,9 +12,13 @@ require('dotenv').config({ path: './config/.env' });
 connectDB();
 
 // Middleware
-app.set('view engine', 'ejs');
+app.set('view engine', 'pug'); // pug
+app.set('views', 'views');  // pug
 app.set(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
+// app.get('/', (req, res, next) => {
+//     res.status(200).render('home')
+// }) // pug
 
 
 // Routes
