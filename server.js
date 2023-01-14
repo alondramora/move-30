@@ -14,7 +14,7 @@ connectDB();
 // Middleware
 app.set('view engine', 'pug'); // pug
 // app.set('views', 'views');  // pug, not sure if I will need this yet
-app.set(express.static('public'));
+app.use(express.static('public')); // app.use works! app.get doesn't 
 app.use(express.urlencoded({ extended: true }));
 
 

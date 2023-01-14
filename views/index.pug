@@ -2,4 +2,9 @@ extends layouts/main-layout.pug
 //- this acts like a partial
 
 block content
-  p This content is from index.pug
+  h1 Hello World
+  form(action='/new' method='POST')
+    label(for='firstName') First Name
+    input(type='text' name='firstName')
+    button(type='submit') Submit
+  
