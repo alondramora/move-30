@@ -2,9 +2,15 @@ extends layouts/main-layout.pug
 //- this acts like a partial
 
 block content
-  h1 Hello World
-  form(action='/new' method='POST')
-    label(for='firstName') First Name
-    input(type='text' name='firstName')
-    button(type='submit') Submit
-  
+  .main
+    .main-child.left
+      img.yoga(src='/imgs/yoga-home.jpg')
+    .main-child.right
+      h1 This is where the login and sign up modal will be
+
+  //-my form
+  //- form(action='/new' method='POST')
+  //-   label(for='firstName') First Name
+  //-   input(type='text' name='firstName')
+  //-   button(type='submit') Submit
+
