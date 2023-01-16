@@ -9,6 +9,15 @@ module.exports = {
             if (err) return res.status(500).send(err);
         }
     },
+    getAbout: async (req, res) => {
+        console.log('hello') // this is here to see if it's working
+        try {
+            res.render('about'); 
+        } catch (err) {
+            console.log(err);
+            return res.status(500).send(err);
+        }
+    },
     createUser: async (req, res) => {
         const newUser = new User(
             {

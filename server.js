@@ -3,10 +3,12 @@ const express = require('express');
 const app = express();
 const PORT = 2005;
 const mongoose = require('mongoose');
-
 const connectDB = require('./config/database.js');
-const homeRoutes = require('./routes/home');
 require('dotenv').config({ path: './config/.env' });
+
+//Routes
+const homeRoutes = require('./routes/home');
+
 
 //Connect to database
 connectDB();
@@ -19,6 +21,9 @@ app.use(express.urlencoded({ extended: true }));
 
 
 // Routes
+// app.get('/', (req, res) => {
+//     res.json({ message: 'success' })
+// });
 app.use('/', homeRoutes);
 
 
