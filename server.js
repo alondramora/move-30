@@ -4,6 +4,7 @@ const app = express();
 const PORT = 2005;
 const mongoose = require('mongoose');
 const connectDB = require('./config/database.js');
+const multer = require('multer');
 require('dotenv').config({ path: './config/.env' });
 
 //Routes

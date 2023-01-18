@@ -20,12 +20,12 @@ module.exports = {
         }
     },
     createEntry: async (req, res) => {
-        const newEntry = new Entry(
+        const newEntry = new Entry( // use the Entry model to create a new entry
             {
-                caption: req.body.caption,
+                caption: req.body.caption, // send the "caption" from the form body that is being sent
             })
         try {
-            await newEntry.save();
+            await newEntry.save(); // saves the new entry to the database
             console.log(newEntry);
             res.redirect('/');
         } catch (err) {
