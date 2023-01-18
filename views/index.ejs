@@ -10,10 +10,24 @@
 </head>
 <body>
     <h1>Hello World</h1>  
-    <form action="/new" method="POST">
+    <form action="/newUser" method="POST">
     <label for="firstName">First Name</label>
     <input type="text" name="firstName">
     <button type="submit">Submit</button>
     </form> 
 </body>
+
+// POST
+
+<form action="" enctype="multipart/form-data" method="POST">
+    <div> 
+        <label for="caption">Caption</label>
+        <textarea class="form-control" id="caption" name="caption" placeholder="Write about yourr 30 minutes of movement here..."></textarea>
+    </div>
+    <div>
+        <label for="imgUpload" class="form-label">Share a pic</label>
+        <input type="file" class="form-control" id="imageUpload" name="file">
+    </div>
+</form>
+
 </html>

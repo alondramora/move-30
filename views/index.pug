@@ -6,15 +6,21 @@ block content
     .main-child.left
       img.yoga(src='/imgs/yoga-home.jpg')
     .main-child.right
-      h1 Move 30
-      p A community to encourage eachother to get in at least 30 minutes of movement a day for both our physical and mental well being.
-      br
+      //- h1 Move 30
+      //- p A community to encourage eachother to get in at least 30 minutes of movement a day for both our physical and mental well being.
+      //- br
       section
         h1 Document your 30 minutes of movement for the day: 
-          <form action ="/new" method="post">
-              <label for="caption">Caption:</label>
-              <input type="text" name="caption"/>
-              <button type="submit">Submit</button>
+          <form action ="/new" enctype="multipart/form-data" method="post">
+            <div>
+               <label for="caption">Caption</label>
+               <textarea class="form-control" id="caption" name="caption" placeholder="Write about yourr 30 minutes of movement here..."></textarea>
+            </div>
+            <div>
+              <label for="imgUpload" class="form-label">Share a pic</label>
+              <input type="file" class="form-control" id="imageUpload" name="file">
+            </div>
+            <button type="submit">Submit</button>
           </form>
   //-my form
   //- form(action='/new' method='POST')

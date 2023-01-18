@@ -1,5 +1,5 @@
 const User = require('../models/users.js');
-const Entry = require('../models/entry.js');
+const Post = require('../models/post.js');
 
 module.exports = {
     getIndex: async (req, res) => {
@@ -19,14 +19,15 @@ module.exports = {
             return res.status(500).send(err);
         }
     },
-    createEntry: async (req, res) => {
-        const newEntry = new Entry( // use the Entry model to create a new entry
+    createPost: async (req, res) => {
+        const newPost = new Post( // use the Entry model to create a new entry
             {
                 caption: req.body.caption, // send the "caption" from the form body that is being sent
+                
             })
         try {
-            await newEntry.save(); // saves the new entry to the database
-            console.log(newEntry);
+            await newPost.save(); // saves the new entry to the database
+            console.log(newPost);
             res.redirect('/');
         } catch (err) {
             console.log(err);
