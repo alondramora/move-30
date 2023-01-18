@@ -5,6 +5,14 @@ const entrySchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    publicId: {
+        type: String,
+    },
+    imageUrl: {
+        type: String,
+        required: false,
+    },
+    date: Date.now(),
     // image: {
     //     type:
     //     required: false;
