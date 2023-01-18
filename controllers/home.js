@@ -1,4 +1,5 @@
 const User = require('../models/users.js');
+const Entry = require('../models/entry.js');
 
 module.exports = {
     getIndex: async (req, res) => {
@@ -18,18 +19,32 @@ module.exports = {
             return res.status(500).send(err);
         }
     },
-    createUser: async (req, res) => {
-        const newUser = new User(
+    createEntry: async (req, res) => {
+        const newEntry = new Entry(
             {
-                firstName: req.body.firstName,
+                caption: req.body.caption,
             })
         try {
-            await newUser.save();
-            console.log(newUser);
+            await newEntry.save();
+            console.log(newEntry);
             res.redirect('/');
         } catch (err) {
-            if (err) res.status(500).send(err);
-            res.redirect('/');
+            console.log(err);
+            return res.status(500).send(err);
         }
     },
+    // createUser: async (req, res) => {
+    //     const newUser = new User(
+    //         {
+    //             firstName: req.body.firstName,
+    //         })
+    //     try {
+    //         await newUser.save();
+    //         console.log(newUser);
+    //         res.redirect('/');
+    //     } catch (err) {
+    //         if (err) res.status(500).send(err);
+    //         res.redirect('/');
+    //     }
+    // },
 };

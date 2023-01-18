@@ -8,6 +8,14 @@ block content
     .main-child.right
       h1 Move 30
       p A community to encourage eachother to get in at least 30 minutes of movement a day for both our physical and mental well being.
+      br
+      section
+        h1 Document your 30 minutes of movement for the day: 
+          <form action ="/new" method="post">
+              <label for="caption">Caption:</label>
+              <input type="text" name="caption"/>
+              <button type="submit">Submit</button>
+          </form>
   //-my form
   //- form(action='/new' method='POST')
   //-   label(for='firstName') First Name
