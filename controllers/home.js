@@ -1,7 +1,11 @@
 const User = require('../models/users.js');
 const Post = require('../models/post.js');
+const cloudinary = require("../middleware/cloudinary");
+
 
 module.exports = {
+
+    //Render the index page
     getIndex: async (req, res) => {
         try {
             const users = await User.find();
@@ -10,8 +14,9 @@ module.exports = {
             if (err) return res.status(500).send(err);
         }
     },
+
+    // Render the About page - might delete later
     getAbout: async (req, res) => {
-        console.log('hello') // this is here to see if it's working
         try {
             res.render('about'); 
         } catch (err) {
@@ -19,15 +24,22 @@ module.exports = {
             return res.status(500).send(err);
         }
     },
-    createPost: async (req, res) => {
-        const newPost = new Post( // use the Entry model to create a new entry
-            {
-                caption: req.body.caption, // send the "caption" from the form body that is being sent
-                
-            })
+    
+    //Create a new post
+    createPost: async (req, res) => { 
         try {
-            await newPost.save(); // saves the new entry to the database
-            console.log(newPost);
+            //upload image to cloudinary
+            const result = await cloudinary.uploader.upload(req.file.path);
+
+            await Post.create({ // referencing our model to create a new post
+                caption: req.body.caption,
+                image: result.secure_url,
+                cloudinaryId: result.public_id,
+                // user: req.User.id, - need to attach user to posts 
+                likes: 0,
+            });
+            console.log(Post);
+            console.log('Post has been added!')
             res.redirect('/');
         } catch (err) {
             console.log(err);
