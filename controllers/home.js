@@ -1,10 +1,9 @@
-const User = require('../models/users.js');
-const Post = require('../models/post.js');
+const User = require('../models/users.js'); // import User schema
+const Post = require('../models/post.js'); // import Post schema
 const cloudinary = require("../middleware/cloudinary");
 
 
 module.exports = {
-
     //Render the index page
     getIndex: async (req, res) => {
         try {
@@ -14,7 +13,6 @@ module.exports = {
             if (err) return res.status(500).send(err);
         }
     },
-
     // Render the About page - might delete later
     getAbout: async (req, res) => {
         try {
@@ -24,7 +22,15 @@ module.exports = {
             return res.status(500).send(err);
         }
     },
-    
+    //Render profile page
+     getProfile: async (req, res) => {
+        try {
+            res.render('profile'); 
+        } catch (err) {
+            console.log(err);
+            return res.status(500).send(err);
+        }
+    },
     //Create a new post
     createPost: async (req, res) => { 
         try {

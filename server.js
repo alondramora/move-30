@@ -29,5 +29,4 @@ app.use('/', homeRoutes);
 
 
 
-
 app.listen(PORT, () => console.log(`Server is running YO! Port: ${PORT}`));

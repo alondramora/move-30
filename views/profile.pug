@@ -1,4 +1,30 @@
 extends layouts/main-layout.pug 
 
 block content
-   
+   section
+        h1 Document your 30 minutes of movement for the day: 
+          <form action ="/new" enctype="multipart/form-data" method="post">
+            <div>
+               <label for="caption">Caption</label>
+               <textarea class="form-control" id="caption" name="caption" placeholder="Write about yourr 30 minutes of movement here..."></textarea>
+            </div>
+            <div>
+              <label for="imgUpload" class="form-label">Share a pic</label>
+              <input type="file" class="form-control" id="imageUpload" name="file">
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+        br
+        br
+        <h1>Sign in</h1>
+        <form action="/login" method="post">
+            <section>
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text" autocomplete="username" required autofocus>
+            </section>
+            <section>
+                <label for="current-password">Password</label>
+                <input id="current-password" name="password" type="password" autocomplete="current-password"    required>
+            </section>
+            <button type="submit">Sign in</button>
+        </form>
