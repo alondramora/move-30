@@ -6,7 +6,8 @@ const mongoose = require('mongoose');
 const connectDB = require('./config/database.js');
 const multer = require('multer');
 const passport = require("passport");
-const session = require("express-session");
+const LocalStrategy = require('passport-local');
+const session = require('express-session');
 require('dotenv').config({ path: './config/.env' });
 
 //Routes
