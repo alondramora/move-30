@@ -4,12 +4,21 @@ const cloudinary = require("../middleware/cloudinary");
 
 
 module.exports = {
-     loginUser: async (req, res) => {
+      getLogin: async (req, res) => {
         try {
-            console.log(`You passed the vibe check`) // logged in
+            res.render('login'); 
         } catch (err) {
-            console.log('You did NOT pass the vibe check') // not logged in
-            if (err) return res.status(500).send(err);
+            console.log(err);
+            return res.status(500).send(err);
         }
-    },   
+    },
+        getSignup: async (req, res) => {
+        try {
+            res.render('signup'); 
+        } catch (err) {
+            console.log(err);
+            return res.status(500).send(err);
+        }
+    },
+    
 };

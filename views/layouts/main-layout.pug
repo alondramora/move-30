@@ -15,9 +15,11 @@ html
           //- takes user back to homepage
         ul
           li
-            a(href='/about') About
+            a(href='/profile') Profile
+            //- renders the profile page
           li
-            a(href='/profile') Login
+            a(href='/auth/login') Login
+            //- renders the login page
           li
-            a(href='#') Sign Up
+            a(href='/auth/signup') Sign Up
 block content
