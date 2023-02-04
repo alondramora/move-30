@@ -20,8 +20,6 @@ require('dotenv').config({ path: './config/.env' });
 const homeRoutes = require('./routes/home');
 const authRoutes = require('./routes/auth');
 
-
-
 //Connect to database
 connectDB();
 
@@ -47,8 +45,8 @@ app.use(logger("dev"));
 app.use(methodOverride("_method"));
 
 // Passport middleware
-// app.use(passport.initialize());
-// app.use(passport.session());
+app.use(passport.initialize());
+app.use(passport.session());
 
 //Use flash messages for errors, info, ect...
 app.use(flash());
