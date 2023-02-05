@@ -5,6 +5,7 @@ const passport = require("passport");
 const validator = require("validator");
 
 module.exports = {
+    // render the login page
       getLogin: async (req, res) => {
         try {
             res.render('login'); 
@@ -13,6 +14,7 @@ module.exports = {
             return res.status(500).send(err);
         }
     },
+    // render the sign up page
         getSignup: async (req, res) => {
         try {
             res.render('signup'); 
