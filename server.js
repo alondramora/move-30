@@ -7,7 +7,7 @@ const connectDB = require('./config/database.js');
 const multer = require('multer');
 const logger = require("morgan");
 const passport = require("passport");
-const LocalStrategy = require('passport-local');
+// const LocalStrategy = require('passport-local');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const flash = require("express-flash");
@@ -44,12 +44,23 @@ app.use(logger("dev"));
 //Use forms for put / delete
 app.use(methodOverride("_method"));
 
+//Use flash messages for errors, info, ect...
+app.use(flash());
+
+// Setup Sessions - stored in MongoDB
+// app.use(
+//   session({
+//     secret: "keyboard cat",
+//     resave: false,
+//     saveUninitialized: false,
+//     store: new MongoStore({ mongooseConnection: mongoose.connection }),
+//   })
+// );
+
 // Passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
 
-//Use flash messages for errors, info, ect...
-app.use(flash());
 
 
 app.listen(PORT, () => console.log(`Server is running YO! Port: ${PORT}`));
