@@ -36,7 +36,7 @@ module.exports = {
 
         if (validationErrors.length) { // if there is something in the validation errors array
             req.flash("errors", validationErrors); // show the errors?
-            return res.redirect("../signup");
+            return res.redirect("../auth/signup");
         }
         req.body.email = validator.normalizeEmail(req.body.email, {
             gmail_remove_dots: false,
