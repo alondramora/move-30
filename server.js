@@ -29,11 +29,6 @@ app.use(express.static('public')); // app.use works! app.get doesn't
 app.use(express.urlencoded({ extended: true }));
 
 
-// Routes
-app.use('/', homeRoutes);
-app.use('/auth', authRoutes);
-
-
 //Body Parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -48,19 +43,22 @@ app.use(methodOverride("_method"));
 app.use(flash());
 
 // Setup Sessions - stored in MongoDB
-// app.use(
-//   session({
-//     secret: "keyboard cat",
-//     resave: false,
-//     saveUninitialized: false,
-//     store: new MongoStore({ mongooseConnection: mongoose.connection }),
-//   })
-// );
+app.use(
+  session({
+    secret: "keyboard cat",
+    resave: false,
+    saveUninitialized: false,
+    store: new MongoStore({ mongooseConnection: mongoose.connection }),
+  })
+);
 
 // Passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Routes
+app.use('/', homeRoutes);
+app.use('/auth', authRoutes);
 
 
 app.listen(PORT, () => console.log(`Server is running YO! Port: ${PORT}`));
