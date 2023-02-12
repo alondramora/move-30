@@ -49,7 +49,8 @@ module.exports = {
         });
 
         User.findOne(
-            { $or: [{ email: req.body.email }] },
+            // { $or: [{ email: req.body.email }] },
+            { email: req.body.email },
             (err, existingUser) => {
                 if (err) {
                     return next(err);
