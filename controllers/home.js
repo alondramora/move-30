@@ -46,7 +46,7 @@ module.exports = {
             });
             console.log(Post);
             console.log('Post has been added!')
-            res.redirect('/');
+            res.redirect('/profile');
         } catch (err) {
             console.log(err);
             return res.status(500).send(err);

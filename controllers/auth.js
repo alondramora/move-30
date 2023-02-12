@@ -49,7 +49,7 @@ module.exports = {
         });
 
         User.findOne(
-            { $or: [{ email: req.body.email }, { userName: req.body.userName }] },
+            { $or: [{ email: req.body.email }] },
             (err, existingUser) => {
                 if (err) {
                     return next(err);

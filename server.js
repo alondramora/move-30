@@ -13,6 +13,10 @@ const MongoStore = require('connect-mongo');
 const flash = require("express-flash");
 const methodOverride = require("method-override");
 
+// Getting rid of mongoose deprication warning 
+mongoose.set('strictQuery', true);
+
+
 //Use .env file in config folder
 require('dotenv').config({ path: './config/.env' });
 
@@ -26,7 +30,6 @@ connectDB();
 // Middleware
 app.set('view engine', 'pug'); // pug
 app.use(express.static('public')); // app.use works! app.get doesn't 
-app.use(express.urlencoded({ extended: true }));
 
 
 //Body Parsing
