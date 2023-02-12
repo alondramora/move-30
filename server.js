@@ -20,12 +20,16 @@ mongoose.set('strictQuery', true);
 //Use .env file in config folder
 require('dotenv').config({ path: './config/.env' });
 
+//Passport config
+require("./config/passport")(passport);
+
+//Connect to database
+connectDB();
+
 //Routes
 const homeRoutes = require('./routes/home');
 const authRoutes = require('./routes/auth');
 
-//Connect to database
-connectDB();
 
 // Middleware
 app.set('view engine', 'pug'); // pug
