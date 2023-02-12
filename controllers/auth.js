@@ -49,7 +49,7 @@ module.exports = {
         });
 
         User.findOne(
-            // { $or: [{ email: req.body.email }] },
+            // { $or: [{ email: req.body.email, firstName: req.body}] },
             { email: req.body.email },
             (err, existingUser) => {
                 if (err) {
@@ -74,7 +74,7 @@ module.exports = {
                 });
             }
         );
-    
+        console.log(user); // console log the new user we just created
     }
 
 };
