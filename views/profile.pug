@@ -11,5 +11,6 @@ block content
 						label.form-label(for='imgUpload') Share a pic
 						input#imageUpload.form-control(type='file' name='file')
 					button(type='submit') Submit
-				a.btn(href='/auth/logout') Logout
+				if user
+					a.btn(href='/auth/logout') Logout
 

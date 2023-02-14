@@ -60,6 +60,13 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Creating a variable to every page in the view
+app.use((req, res, next) => {
+  res.locals.user = req.user;
+  //   console.log(req.user);
+  next();
+});
+
 // Routes
 app.use("/", homeRoutes);
 app.use("/auth", authRoutes);
