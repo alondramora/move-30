@@ -53,9 +53,6 @@ app.use(
     resave: false,
     saveUninitialized: false,
     store: new MongoStore({ mongoUrl: process.env.DB_CONNECTION }),
-    // store: MongoStore.create({
-    //   mongoUrl: process.env.DB_CONNECTION,
-    // }),
   })
 );
 
