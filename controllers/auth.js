@@ -118,7 +118,10 @@ module.exports = {
     })(req, res, next);
   },
   logout: (req, res) => {
-    req.logout();
+    // console.log(req.logout);
+    req.logout((err) => {
+      if (err) console.log("Failed to log you out! ☹️", err);
+    });
     req.session.destroy((err) => {
       if (err)
         console.log(
