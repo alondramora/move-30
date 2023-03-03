@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const User = require("../models/users");
 // const User = require("../models/User");
 
-
+// sign in using email and password
 module.exports = function (passport) {
   passport.use(
     new LocalStrategy({ usernameField: "email" }, (email, password, done) => {
@@ -16,8 +16,7 @@ module.exports = function (passport) {
         }
         if (!user.password) {
           return done(null, false, {
-            msg:
-              "Your account was registered using a sign-in provider. To enable password login, sign in using a provider, and then set a password under your user profile.",
+            msg: "Please double check your password and try again.",
           });
         }
         user.comparePassword(password, (err, isMatch) => {

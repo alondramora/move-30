@@ -56,4 +56,9 @@ nav a {
   border: 1px solid purple;
 }
 
+.container p {
+  padding: 1rem 3rem 0 3rem;
+  text-align: center;
+}
+
 /* need to center the paragraph for mobile view */
