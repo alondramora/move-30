@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 body {
@@ -10,61 +10,50 @@ body {
 
 /* nav bar */
 nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
 }
 
 nav ul {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
 
 nav li {
-    padding-left: 1rem;
+  padding-left: 1rem;
 }
 
 nav a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
+
 /* nav bar media queries */
-@media only screen and (max-width: 600px){
-    nav {
-        flex-direction: column;
-        margin: 0 auto;
-    }
-    nav ul {
-        flex-direction: column;
-        padding-top: 0.5rem;
-    }
-    nav li {
-        padding: 0.5rem 0;
-    }
-    nav * {
-        align-self: center;
-    }
+@media only screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  nav ul {
+    flex-direction: column;
+    padding-top: 0.5rem;
+  }
+  nav li {
+    padding: 0.5rem 0;
+  }
+  nav * {
+    align-self: center;
+  }
 }
 
-.main {
-    /* border: 1px solid red; */
-    /* height: 100vh; */
-    display: flex;
+/* info area */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid purple;
 }
 
-.main-child {
-    flex: 1;
-    padding-top: 2rem;
-    border: 2px solid purple;
-}
-
-.main-child:first-child {
-    margin-right: 20px;
-}
-
-/* yoga pic on homepage */
-.yoga {
-    object-fit: contain;
-    width: 35rem;
-    margin-left: 7rem;
-}
+/* need to center the paragraph for mobile view */
