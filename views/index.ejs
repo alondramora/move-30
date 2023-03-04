@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Move 30</title>
-    <link rel="stylesheet" href="style.css">
-
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <form action="/login" method="POST">
-        <label for="email">Email:</label>
-        <input type="text" name="email" placeholder="Example: yourEmail@yahoo.com">
-        <label for="password">Password:</label>
-        <input type="text" name="password" placeholder="">
-        <button type="submit">Submit</button>
-    </form> 
-</body>
+      <label for="email">Email:</label>
+      <input
+        type="text"
+        name="email"
+        placeholder="Example: yourEmail@yahoo.com"
+      />
+      <label for="password">Password:</label>
+      <input type="text" name="password" placeholder="" />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
 
-// POST
+  // POST
 
-<form action="" enctype="multipart/form-data" method="POST">
-    <div> 
-        <label for="caption">Caption</label>
-        <textarea class="form-control" id="caption" name="caption" placeholder="Write about yourr 30 minutes of movement here..."></textarea>
+  <form action="" enctype="multipart/form-data" method="POST">
+    <div>
+      <label for="caption">Caption</label>
+      <textarea
+        class="form-control"
+        id="caption"
+        name="caption"
+        placeholder="Write about yourr 30 minutes of movement here..."
+      ></textarea>
     </div>
     <div>
-        <label for="imgUpload" class="form-label">Share a pic</label>
-        <input type="file" class="form-control" id="imageUpload" name="file">
+      <label for="imgUpload" class="form-label">Share a pic</label>
+      <input type="file" class="form-control" id="imageUpload" name="file" />
     </div>
-</form>
-
+  </form>
+  <script src="../public/js/main.js"></script>
 </html>
