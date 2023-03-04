@@ -3,7 +3,8 @@ module.exports = {
     if (req.isAuthenticated()) {
       return next();
     } else {
-      res.redirect("/");
+      console.log("must be logged in to access");
+      res.redirect("/auth/signup");
     }
   },
   ensureGuest: function (req, res, next) {

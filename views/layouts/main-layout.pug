@@ -9,17 +9,31 @@ html
 		link(href='https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap' rel='stylesheet')
 		link(rel='stylesheet' href='/css/style.css')
 	body 
-		nav
-				h2 
-					a(href='/') Move 30
-					//- takes user back to homepage
+		nav(class='navbar')
+			div(class='brand-title')
+				a(href='/') Move 30
+			a(href='#' class='toggle-button')
+				span(class='bar')
+				span(class='bar')
+				span(class='bar')
+			div(class='navbar-links')
 				ul
 					li
 						a(href='/profile') Profile
-						//- renders the profile page
 					li
 						a(href='/auth/login') Login
-						//- renders the login page
 					li
-						a(href='/auth/signup') Sign Up
+						a(href='/auth/signup') Signup
+		//- nav
+		//- 		a(href='/') Move 30
+		//- 			//- takes user back to homepage
+		//- 		ul
+		//- 			li
+		//- 				a(href='/profile') Profile
+		//- 				//- renders the profile page
+		//- 			li
+		//- 				a(href='/auth/login') Login
+		//- 				//- renders the login page
+		//- 			li
+		//- 				a(href='/auth/signup') Sign Up
 block content
