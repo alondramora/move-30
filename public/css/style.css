@@ -19,7 +19,7 @@ body {
 }
 
 .brand-title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: 0.5rem;
 }
 
@@ -108,4 +108,8 @@ body {
   .navbar-links.active {
     display: flex;
   }
+}
+
+.container * {
+  text-align: center;
 }
