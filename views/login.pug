@@ -1,11 +1,11 @@
 extends layouts/main-layout.pug 
 
 block content
-	h1 Login
-	form(action='/auth/login' method='POST')
+	h1(class='loginHeading') Login
+	form(class='loginForm' action='/auth/login' method='POST')
 		label(for='email') Email:
-		input#email(type='text' name='email' placeholder='')
+		input#email(type='text' name='email' placeholder='Email')
 		label(for='password') Password:
-		input#password(type='password' name='password' placeholder='')
+		input#password(type='password' name='password' placeholder='Password')
 		button(type='submit') Submit
 	a(href='/auth/signup') Create an Account
