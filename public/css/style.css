@@ -114,7 +114,7 @@ body {
   text-align: center;
 }
 
-/* Login Page */
+/* Login and Signup Pages */
 .loginHeading,
 .signupHeading {
   text-align: center;
@@ -140,4 +140,12 @@ input[type="password"] {
   /* box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06); */
 }
 
-/* Signup Page */
+/* Buttons */
+button {
+  background: #3795bd;
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  padding: 4px 10px;
+}
