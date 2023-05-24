@@ -124,6 +124,11 @@ body {
   padding: 20px;
 }
 
+.createAccountButton {
+  display: flex;
+  justify-content: center;
+}
+
 input[type="text"],
 input[type="password"] {
   padding: 10px;
