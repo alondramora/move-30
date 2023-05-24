@@ -1,8 +1,8 @@
 extends layouts/main-layout.pug 
 
 block content
-	h1 Signup
-	form(action='/auth/signup' method='POST')
+	h1(class='signupHeading') Signup
+	form(class='signupForm' action='/auth/signup' method='POST')
 		label(for='email') Email:
 		input#email(type='text' name='email' placeholder='')
 		label(for='password') Password:
@@ -10,4 +10,4 @@ block content
 		label(for='password') Confirm Password:
 		input(type='password' name='confirmPassword' placeholder='')
 		button(type='submit') Submit
-	a(href='/auth/login') Login
+	a(class='loginButton' href='/auth/login') Login

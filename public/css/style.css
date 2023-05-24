@@ -115,16 +115,19 @@ body {
 }
 
 /* Login Page */
-.loginHeading {
+.loginHeading,
+.signupHeading {
   text-align: center;
 }
 
-.loginForm {
+.loginForm,
+.signupForm {
   width: 200px;
   padding: 20px;
 }
 
-.createAccountButton {
+.createAccountButton,
+.loginButton {
   display: flex;
   justify-content: center;
 }
@@ -136,3 +139,5 @@ input[type="password"] {
   border-radius: 10px;
   /* box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06); */
 }
+
+/* Signup Page */
